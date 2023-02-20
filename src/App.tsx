@@ -1,15 +1,15 @@
 import { Box } from "@mui/system";
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, RouterProvider } from "react-router-dom";
 
 import { Navbar } from "./components";
+import router from "./router";
 
 function App() {
     return (
-        <BrowserRouter>
-            <Box>
-                <Navbar />
-            </Box>
-        </BrowserRouter>
+        <Box>
+            <Navbar />
+            <RouterProvider router={router} />
+        </Box>
     )
 }
 
